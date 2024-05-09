@@ -1,6 +1,7 @@
 import { FaSearch, FaShoppingBag } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import UserMenuHeader from "./DropDownMenuProfile";
 
 const Header = () => {
   return (
@@ -16,9 +17,9 @@ const Header = () => {
             delay: 0.5,
           },
         }}
-        className="hidden xl:flex flex-1 overflow-y-hidden "
+        className=" flex-1 overflow-y-hidden "
       >
-        <ul className="flex flex-1 gap-6 text-base">
+        <ul className=" flex-1 gap-6 text-base hidden sm:flex">
           <li className="hover:underline underline-offset-1">
             <a href="/shop">SHOP</a>
           </li>
@@ -32,6 +33,9 @@ const Header = () => {
             <a href="/kids">KIDS</a>
           </li>
         </ul>
+        <div className="flex sm:hidden">
+          <UserMenuHeader />
+        </div>
       </motion.div>
       <motion.div
         initial={{ y: "-400%" }}
