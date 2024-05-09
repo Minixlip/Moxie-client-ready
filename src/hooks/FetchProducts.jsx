@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { baseUrl } from "../../Urls";
 
 export const useFetchProduct = () => {
   const [error, setError] = useState(null);
@@ -7,10 +8,10 @@ export const useFetchProduct = () => {
   const fetchProduct = async (category) => {
     setError(null);
 
-    const response = await fetch(`http://localhost:4000/api/product/fetch`, {
-      method: 'POST',
+    const response = await fetch(`${baseUrl}api/product/fetch`, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(category),
     });
