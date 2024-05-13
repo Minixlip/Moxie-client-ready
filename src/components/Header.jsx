@@ -1,11 +1,10 @@
 import { FaSearch, FaShoppingBag } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import UserMenuHeader from "./DropDownMenuProfile";
 
 const Header = () => {
   return (
-    <div className="flex mx-6 xl:mx-64 py-5 lg:py-10 items-end bg-transparent">
+    <div className="flex sm:flex-row flex-col mx-6 xl:mx-64 py-5 lg:py-10 sm:items-end bg-transparent items-center gap-y-10">
       <motion.div
         initial={{ y: "-400%" }}
         animate={{
@@ -19,7 +18,7 @@ const Header = () => {
         }}
         className=" flex-1 overflow-y-hidden "
       >
-        <ul className=" flex-1 gap-6 text-base hidden sm:flex">
+        <ul className=" flex-1 gap-6 text-base flex">
           <li className="hover:underline underline-offset-1">
             <a href="/shop">SHOP</a>
           </li>
@@ -33,9 +32,6 @@ const Header = () => {
             <a href="/kids">KIDS</a>
           </li>
         </ul>
-        <div className="flex sm:hidden">
-          <UserMenuHeader />
-        </div>
       </motion.div>
       <motion.div
         initial={{ y: "-400%" }}
@@ -69,8 +65,8 @@ const Header = () => {
         }}
         className="flex-1 flex "
       >
-        <div className="hidden xl:flex flex-1">
-          <ul className="flex flex-1 gap-4 text-base justify-end items-center">
+        <div className="flex flex-1">
+          <ul className="flex flex-1 gap-4 text-base sm:justify-end items-center  ">
             <li className="hover:underline underline-offset-1">
               <a href="/about">ABOUT</a>
             </li>
